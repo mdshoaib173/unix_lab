@@ -1,8 +1,11 @@
-vim has to modes 
+
+
+Vim is an open-source text editor designed for working with programming code in Unix. 
+it has two types:
 1)insert mode (here u can insert any thing just as like normal text editor)
 2)command mode(here we use commands to perform any task )
 
-THE FOLLOWING ARE THE FEW COMMANDS:-
+some of the commands are:
 -----------------------------------
 x -to delete the unwanted character 
 u-to undo
