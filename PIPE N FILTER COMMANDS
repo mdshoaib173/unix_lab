@@ -1,14 +1,29 @@
       pipe and filter commands
 
-$grep -v Name CSE.csv : Removes the field which is mentioned (here name).
-$cut -d , -f 2 CSE.csv: Prints the desired fields.
-$head -c 9 CSE.csv : Prints the number the number of charecters as specified(here 9).
-$head -v CSE.csv: Prints the header for the file.
-$cut -d , -f 1 CSE.csv|grep -v USN: Prints the first column without the field USN
+HEAD - This displays the head of the lines or data (when the number is mentioned)
+FOR EG.
+head -n 4 CSV_PROJECT.csv 
 
 
-exercise.
+TAIL - This displays the head of the lines or data (when the number is mentioned) 
+FOR EG.
+tail -n 4 CSV_PROJECT.csv
 
+
+CUT-This command can display any user specified column
+FOR EG.
+cut -d , -f 1 CSV_PROJECT.csv
+
+SORT-It sorts the table according to the alphabets
+FOR EG.
+sort -d CSV_PROJECT.csv
+
+WORD COUNT - It gives us a count with 3 blocks , i.e no. of lines , no. of words , no. of bytes.
+FOR EG.
+wc < CSV_PROJECT.csv
+
+
+exercise
 
 1. Display third column of filename.csv without printing the reader CGPA, also sort the same.
 $cut -d , -f 3 CSA1.csv|grep -v cgpa|sort
