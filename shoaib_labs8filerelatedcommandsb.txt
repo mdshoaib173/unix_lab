@@ -1,0 +1,106 @@
+
+
+1)File related commands:
+
+a)cp
+
+cp copies a file
+
+Most used options are:
+
+-r 
+    copies directories (recursively)
+-p 
+    preserves permissions, ownership, and timestamps
+-i 
+    prompt before overwrite
+-v 
+    verbose, show filenames as they are being copied 
+
+b)rm
+
+rm deletes a file from the filesystem, like the "del" command in DOS.
+
+
+Some useful options are:
+
+-d, --directory 
+    unlink FILE, even if it is an empty directory (some systems let superuser unlink non-empty directories too)
+-f, --force 
+    ignore nonexistent files, never prompt
+-i, --interactive 
+    prompt before any removal
+-P 
+    (*BSD only) overwrite file before deletion
+-r, -R, --recursive 
+    remove the contents of directories recursively (the force option must often be used to successfully run rm recursively)
+
+c)mv
+
+mv move and/or rename files
+
+Examples
+
+Rename file 'unix' to 'Unix' (assuming "Unix" is not a directory)
+$ mv -i unix Unix
+
+Move file Unix from your home directory to /tmp.
+$ mv -i ~/Unix /tmp/Unix
+
+
+d)cmp
+
+cmp command in Linux/UNIX is used to compare the two files byte by byte and helps you to find out whether the two files are identical or not.
+
+Options for cmp command
+
+1. -b(print-bytes) : If you want cmp displays the differing bytes in the output when used with -b option.
+2. -i [bytes-to-be-skipped] : Now, this option when used with cmp command helps to skip a particular number of initial bytes from both the files and then after skipping it compares the files. This can be done by specifying the number of bytes as argument to the -i command line option.
+3. -i [bytes to be skipped from first file] : [bytes to be skipped from second file] :This option is very much similar to the above -i [bytes to be skipped] option but with the difference that now it allows us to input the number of bytes we want to skip from both the files separately.
+4. -l option : This option makes the cmp command print byte position and byte value for all differing bytes.
+5. -s option : This allows you to suppress the output normally produced by cmp command i.e it compares two files without writing any messages. This gives an exit value of 0 if the files are identical, a value of 1 if different, or a value of 2 if an error message occurs.
+6. -n [number of bytes to be compared] option :This option allows you to limit the number of bytes you want to compare ,like if there is only need to compare at most 25 or 50 bytes.
+
+
+e)diff
+
+diff analyzes two files and prints the lines that are different. Essentially, it outputs a set of instructions for how to change one file to make it identical to the second file.
+
+options:
+
+--normal 	output a normal diff (the default)
+-q, --brief 	report only when files differ
+-s, --report-identical-files 	report when two files are the same
+-c, -C NUM, --context[=NUM] 	output NUM (default 3) lines of copied context
+-u, -U NUM, --unified[=NUM] 	output NUM (default 3) lines of unified context
+-e, --ed 	output an ed script 
+
+
+f)comm
+
+
+comm - compare two sorted files line by line and write to standard output: the lines that are common, plus the lines that are unique.
+
+
+OPTIONS
+-1	suppress lines unique to file1.
+-2	suppress lines unique to file2.
+-3	suppress lines that appear in both files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

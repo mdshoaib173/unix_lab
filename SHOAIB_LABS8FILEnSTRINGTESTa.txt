@@ -1,0 +1,146 @@
+1) performing file and string tests in unix:
+
+a)FILE TEST:
+We have a few operators that can be used to test various properties associated with a Unix file.
+ex-
+-r file 	Checks if file is readable
+-w file 	Checks if file is writable
+-x file 	Checks if file is executable
+
+shell script:
+
+file- shofile.sh
+
+if [ -r $file ]
+then
+   echo "File has read access"
+els e
+   echo "File does not have read access"
+fi
+
+if [ -w $file ]
+then
+   echo "File has write permission"
+else
+   echo "File does not have write permission"
+fi
+
+if [ -x $file ]
+then
+   echo "File has execute permission"
+else
+   echo "File does not have execute permission"
+fi
+
+if [ -f $file ]
+then
+   echo "File is an ordinary file"
+else
+   echo "This is sepcial file"
+fi
+
+if [ -d $file ]
+then
+   echo "File is a directory"
+else
+   echo "This is not a directory"
+fi
+
+if [ -s $file ]
+then
+   echo "File size is zero"
+else
+   echo "File size is not zero"
+fi
+
+if [ -e $file ]
+then
+   echo "File exists"
+else
+   echo "File does not exist"
+fi
+
+
+output-
+
+File has read access
+shofile.sh: 4: shofile.sh: els: not found
+File does not have read access
+File has write permission
+File has execute permission
+File is an ordinary file
+File is a directory
+File size is zero
+File exists
+
+
+
+B) STRING TEST:
+
+The following string operators are supported by Bourne Shell.
+
+Assume variable a holds "abc" and variable b holds "efg" then −
+
+= 	Checks if the value of two operands are equal or not; if yes, then the condition becomes true. 	[ $a = $b ] is not true.
+
+!= 	Checks if the value of two operands are equal or not; if values are not equal then the condition becomes true.[ $a != $b ] is true.
+
+-z 	Checks if the given string operand size is zero; if it is zero length, then it returns true. 	[ -z $a ] is not true.
+
+SHELL SCRIPT:
+
+
+a="abc"
+b="efg"
+
+if [ $a = $b ]
+then
+   echo "$a = $b : a is equal to b"
+else
+   echo "$a = $b: a is not equal to b"
+fi
+
+if [ $a != $b ]
+then
+   echo "$a != $b : a is not equal to b"
+else
+   echo "$a != $b: a is equal to b"
+fi
+
+if [ -z $a ]
+then
+   echo "-z $a : string length is zero"
+else
+   echo "-z $a : string length is not zero"
+fi
+
+if [ -n $a ]
+then
+   echo "-n $a : string length is not zero"
+else
+   echo "-n $a : string length is zero"
+fi
+
+if [ $a ]
+then
+   echo "$a : string is not empty"
+else
+   echo "$a : string is empty"
+fi
+
+
+OUTPUT:
+
+abc = efg: a is not equal to b
+abc != efg : a is not equal to b
+-z abc : string length is not zero
+-n abc : string length is not zero
+abc : string is not empty.
+
+
+
+
+
+
+
+
