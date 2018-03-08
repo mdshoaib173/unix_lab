@@ -1,0 +1,64 @@
+                 WORKING OF SED COMMANDS
+
+CREATE A FILE- CAT > OFFICE
+Name|Designation|Salary
+Alla|Manager|65000
+balla|staff|59000
+Calla|Head_staff|50000
+Dalla|Director|80000
+Ella|manager|70000
+Falla|Director|80000
+Galla|Staff|60000
+Halla|Staff|60000
+Illa|Staff|59000
+Jalla|Staff|60000
+
+COMMANDS: 
+
+1)cs2016a121@user:~$ sed -n '/[mM]anager/p' office
+Alla|Manager|65000
+Ella|manager|70000
+
+
+2)cs2016a121@user:~$  sed -n '1,2p' office 
+Name|Designation|Salary
+Alla|Manager|65000
+
+3)cs2016a121@user:~$ sed -n '$p' office
+Jalla|Staff|60000
+
+4)cs2016a121@user:~$ sed -n -e '1,3p' -e '5,6p' -e '9,10p' office
+Name|Designation|Salary
+Alla|Manager|65000
+balla|staff|59000
+Dalla|Director|80000
+Ella|manager|70000
+Halla|Staff|60000
+Illa|Staff|59000
+
+
+5)cs2016a121@user:~$ sed -n '/Manager/p' office
+Alla|Manager|65000
+cs2016a121@user:~$ sed -n '1,2!p' office
+balla|staff|59000
+Calla|Head_staff|50000
+Dalla|Director|80000
+Ella|manager|70000
+Falla|Director|80000
+Galla|Staff|60000
+Halla|Staff|60000
+Illa|Staff|59000
+Jalla|Staff|60000
+
+6)cs2016a121@user:~$ sed 's/|/:/g' office
+Name:Designation:Salary
+Alla:Manager:65000
+balla:staff:59000
+Calla:Head_staff:50000
+Dalla:Director:80000
+Ella:manager:70000
+Falla:Director:80000
+Galla:Staff:60000
+Halla:Staff:60000
+Illa:Staff:59000
+Jalla:Staff:60000
