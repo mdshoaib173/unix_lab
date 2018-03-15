@@ -1,0 +1,40 @@
+AWK COMMANDS.
+
+EXERCISE.
+CREATE A FILE.
+
+2016a121@user:~$ cat > awk2.lst
+shobi                        
+shobi is a boy
+he is awesome
+he is well amnnered
+he eats non veg.
+
+QUESTIONS.
+
+1)Delete blank space using awk
+  awk -F "|" '!(/ /)' awk2.lst
+
+shobi                        
+shobiisaboy
+heisawesome
+heiswellamnnered
+heeats non veg
+
+2)Print only the odd lines of a file
+   awk NR%2==1 awk2.lst
+shobi
+he is awesome
+he eats non veg
+
+3)Print last line using awk
+  awk -F "|" 'END{print}' awk2.lst 
+  he eats non veg
+
+Write equavilant command for these commands
+4)head -n 5 awk2
+  awk -F 'NR==1, NR==5{print}' awk2.lst
+  
+  5)sed -n '5,10p' awk2
+awk -F "|" 'NR==5,NR==10 {print}' awk2.lst
+
