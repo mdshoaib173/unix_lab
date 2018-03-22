@@ -32,9 +32,8 @@ he eats non veg
   he eats non veg
 
 Write equavilant command for these commands
-4)head -n 5 awk2
+  4)head -n 5 awk2
   awk -F 'NR==1, NR==5{print}' awk2.lst
-  
   5)sed -n '5,10p' awk2
 awk -F "|" 'NR==5,NR==10 {print}' awk2.lst
 
