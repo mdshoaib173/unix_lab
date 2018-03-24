@@ -1,0 +1,33 @@
+WRITE A SHELL SCRIPT USING SELECT COMMANDS TO DISPLAY THE MENU:
+
+
+SCRIPT:
+PS3='SELECT NAMES : '
+names='shoaib iftekar abid quit'
+select name in $names
+do
+        if [ $name == 'quit' ]
+        then
+                break
+        fi
+        echo hello $name
+
+done
+
+
+OUTPUT:
+
+ chmod +x sho.sh
+cs2016a121@user:~$ ./sho.sh
+1) shoaib
+2) iftekar
+3) abid
+4) quit
+SELECT NAMES : 2
+hello iftekar
+SELECT NAMES : 3
+hello abid
+SELECT NAMES : 4 
+
+
+
