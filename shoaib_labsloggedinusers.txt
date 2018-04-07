@@ -1,0 +1,17 @@
+TO CHECK NUMBER OF USERS LOGGED IN UNIX
+
+SHELL SCRIPT-
+num=$(who -q)
+details=$(who -H)
+echo "The total numver of users logged in : $num"
+echo "The details of logged-in users :\n$details"
+
+
+OUTPUT
+
+The total numver of users logged in : cs2016a121
+# users=1
+The details of logged-in users :
+NAME     LINE         TIME             COMMENT
+cs2016a121 tty2         2018-04-07 08:38 (/dev/tty2)
+
